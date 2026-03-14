@@ -6,19 +6,18 @@ using TMPro;
  
 public class PlayerUI : MonoBehaviour
 {
-	public Player player;
+	public CoinsCounter coinsCount;
+	public Health health;
 	public TextMeshProUGUI coinsCounterText;
 	public Slider healthSlider;
-
  
 	void Update()
 	{
 		// Updating the text with the number of coins
-		coinsCounterText.text = player.coins.ToString();
-
+		coinsCounterText.text = coinsCount.coins.ToString();
 		// Updating the player's health value
-		healthSlider.maxValue = player.maxHealth;
-		healthSlider.value = player.currentHealth;
+		healthSlider.maxValue = health.maxHealth;
+		healthSlider.value = health.currenthealth;
 	}
- 
 }
+ 
